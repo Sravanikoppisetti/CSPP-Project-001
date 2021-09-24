@@ -20,20 +20,43 @@ def cat(text):
         Implementing the cat command functionality by defining a function
     """
     result = ""
+    # result variable is assigned with empty string
     lines = text.splitlines()
+    #Text file is splitted line wise and stored in variable called lines.
+    
     for i in range(len(lines)):
+     # after splitting lines , length of each lines is find using length function 
+     #length of lines assigned as stopping condition for range.
+    
         result += lines[i] + "\n"
+      # list containing lines is appended to result variable one after another.
+      
     return result[:-1]
+       #result[:-1]- will exclude last element in list i.e \n
+      # return function will return the result and display it when you call that function
+
+
 
 def tac(text):
     """
         Implementing the tac command functionality by defining a function
     """
     result = ""
+    # result variable is assigned with empty string
     lines = text.splitlines()
+    #Text file is splitted line wise and stored in variable called lines.
     for i in range(len(lines)-1, -1, -1):
+        # after splitting lines , length of each lines is find using length function 
+     #(length of lines-1 is assigned as start condition),(stop condition as-1) and (step by -1) for the above range.
+
         result += lines[i] + "\n"
+         # list containing lines is appended to result variable one after another.
     return result[:-1]
+     #result[:-1]- will exclude last element in list i.e \n
+      # return function will return the result and display it when you call that function
+
+
+
 
 def tail(text, n_lines=10):
     """
